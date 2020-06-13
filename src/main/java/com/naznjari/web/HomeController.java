@@ -1,5 +1,6 @@
 package com.naznjari.web;
 
+import com.naznjari.config.auth.LoginUser;
 import com.naznjari.config.auth.dto.SessionUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -13,8 +14,7 @@ import javax.servlet.http.HttpSession;
 public class HomeController {
     private final HttpSession httpSession;
     @GetMapping("/")
-    public String home(Model model) {
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+    public String home(Model model, @LoginUser SessionUser user) {
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
