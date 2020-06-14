@@ -9,4 +9,9 @@ public class AuthController {
     public String signup() {
         return "signup";
     }
+
+    @GetMapping("/signin")
+    public String signin() {
+        return "signin";
+    }
 }
