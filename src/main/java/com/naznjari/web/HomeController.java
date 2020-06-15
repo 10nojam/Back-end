@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 @Controller
 public class HomeController {
-    private final HttpSession httpSession;
     @GetMapping("/")
     public String home(Model model, @LoginUser SessionUser user) {
         if (user != null) {
