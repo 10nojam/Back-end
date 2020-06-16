@@ -12,4 +12,9 @@ public class ProblemController {
 
         return "problemList";
     }
+
+    @GetMapping("/problem")
+    public String problem() {
+        return "problem";
+    }
 }
