@@ -21,6 +21,15 @@
                         <th>카테고리</th>
                     </tr>
                     </thead>
+                    <tbody id="tbody">
+                    {{#problems}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{title}}</td>
+                            <td></td>
+                        </tr>
+                    {{/problems}}
+                    </tbody>
                 </table>
             </div>
         </section>

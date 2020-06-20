@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Problem {
+public class Problems {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,11 +18,14 @@ public class Problem {
     private String title;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String describe;
+    private String notes;
+
+    @Column(columnDefinition = "TEXT", nullable = false)
+    private String description;
 
     @Builder
-    public Problem(String title, String describe) {
+    public Problems(String title, String description) {
         this.title = title;
-        this.describe = describe;
+        this.description = description;
     }
 }
