@@ -1,11 +1,14 @@
 package com.naznjari.web;
 
+import com.naznjari.domain.problem.Problems;
 import com.naznjari.service.problem.ProblemsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Controller
@@ -19,8 +22,7 @@ public class ProblemController {
 
     @GetMapping("/problem/{id}")
     public String problem(Model model, @PathVariable Long id) {
-//        Problem problem =
-        model.addAttribute("problem");
+        model.addAttribute("problems", service.findById(id));
         return "problem";
     }
 }
