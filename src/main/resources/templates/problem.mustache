@@ -1,5 +1,15 @@
 {{>layout/header}}
-<script src="abcjs_plugin_5.9.1-min.js" type="text/javascript"></script>
+<script src="/assets/js/abc.js" type="text/javascript"></script>
+<style>
+    #kcm {
+      background-color: white;
+      border: 1px solid red;
+      text-align: center;
+    }
+    h2.leftside, p.leftside {
+        text-align: left
+    }
+  </style>
 <style>
     #kcm {
       background-color: white;
@@ -18,10 +28,14 @@
         </div>
         <!-- Content -->
         <section id="content">
-            <div id="paper1" class="paper"></div>
-            <div id="paper2" class="paper"></div>
-            <div id="paper3" class="paper"></div>
+            <div id="kcm" class="paper"></div>
         </section>
     </div>
 </div>
+{{#problems}}
+<script type="text/javascript">
+                window.ABCJS
+            ABCJS.renderAbc("kcm", "X: 1\nM: 4/4\nL: 1/8\nK: Emin\n"+"{{notes}}");
+            </script>
+{{/problems}}
 {{>layout/footer}}

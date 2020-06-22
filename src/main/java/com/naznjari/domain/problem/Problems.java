@@ -24,8 +24,9 @@ public class Problems {
     private String description;
 
     @Builder
-    public Problems(String title, String description) {
+    public Problems(String title, String description, String notes) {
         this.title = title;
         this.description = description;
+        this.notes = notes;
     }
 }

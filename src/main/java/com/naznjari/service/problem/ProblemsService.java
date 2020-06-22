@@ -23,9 +23,10 @@ public class ProblemsService {
                 .collect(Collectors.toList());
     }
 
-    @Transactional
-    public Optional<Problems> findById(Long id) {
-        Optional<Problems> problems = problemsRepository.findById(id);
-        return problems;
+    @Transactional(readOnly = true)
+    public ProblemsDto findById(Long id) {
+        Problems problems = problemsRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("해당 문제가 없습니다.id="+id));
+        return new ProblemsDto(problems);
     }
 }
