@@ -1,0 +1,7 @@
+T: Test
+M: 6/8
+L: 1/8
+R: reel
+K: D
+|^G=G|F2^E F>^AB|G2 G1 F3|E2ED2D1|E3 =F2E|
+=c_B_A A2 G-|G F2 G1>=FE|=F1/G1/A1/_B/=c d^d2-|de=f e ^d2|
