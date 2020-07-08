@@ -1,7 +1,15 @@
 T: Test
 M: 6/8
 L: 1/8
-R: reel
 K: D
-|^G=G|F2^E F>^AB|G2 G1 F3|E2ED2D1|E3 =F2E|
+%%score {A|B}
+V:A clef=treble
+^G=G|F2^E F>^AB|G2 G1 F3|E2ED2D1|E3 =F2E|
 =c_B_A A2 G-|G F2 G1>=FE|=F1/G1/A1/_B/=c d^d2-|de=f e ^d2|
+x
+x
+V:B clef=bass
+x
+x
+^G,,2=G,, F,,D,,E,,|F,,2 E, ^D,E,=F,|E,2D, C,D,E,|F,^E,=E, ^D,=D,C,|
+B,,2F,, G,,^E,2|F,>E,D,/E,/F,2B,-|B,3B,,3-|B,,3B,,||
